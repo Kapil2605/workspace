@@ -1,0 +1,21 @@
+package com.practice.Advancedlevel;
+
+import java.util.*;
+import java.util.stream.Collectors;
+
+public class Top3No {
+
+	public static void main(String[] args) {
+		List<Integer> list = Arrays.asList(10, 45, 23, 89, 67, 12, 89, 5);
+		
+		
+		//Finding top 3 elements from the list
+		List<Integer>result=list.stream().sorted(Comparator.reverseOrder()).limit(3).collect(Collectors.toList());
+		System.out.println(result);
+		
+		//Finding lowest 3 from the list
+		List<Integer>result=list.stream().sorted().limit(3).collect(Collectors.toList());
+		System.out.println(result);
+	}
+
+}

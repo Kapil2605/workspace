@@ -1,0 +1,16 @@
+package com.practice.Intermidiatelevel;
+
+import java.util.Arrays;
+import java.util.stream.Collectors;
+import java.util.*;
+
+public class FindUnique {
+
+	public static void main(String[] args) {
+		List<Integer>list=Arrays.asList(3,1,2,3,4,5,2,3,4,6);
+		Set<Integer>s=new HashSet<>();
+		List<Integer>result=list.stream().filter(n->s.add(n)).collect(Collectors.toList());
+		System.out.println(result);
+	}
+
+}

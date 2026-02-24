@@ -1,0 +1,16 @@
+package com.practice.Advancedlevel;
+
+import java.util.*;
+import java.util.stream.Collectors;
+
+public class Top3No {
+
+	public static void main(String[] args) {
+		List<Integer> list = Arrays.asList(10, 45, 23, 89, 67, 12, 89, 5);
+		
+		List<Integer>result=list.stream().sorted((a,b)->b-a).limit(3).collect(Collectors.toList());
+		System.out.println(result);
+
+	}
+
+}

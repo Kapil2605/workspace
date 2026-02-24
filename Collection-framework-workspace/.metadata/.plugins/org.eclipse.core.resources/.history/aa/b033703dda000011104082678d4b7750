@@ -1,0 +1,22 @@
+package com.intermidiate2;
+
+import java.util.*;
+import java.util.stream.Collectors;
+
+public class GroupingMethod {
+
+	public static void main(String[] args) {
+		
+		//use grouping to see common string length
+		List<String>words=List.of("Kodewala","UPI","API","Console","Problems",".Net");
+		
+		Map<Integer,List<String>>output=words.stream().collect(Collectors.groupingBy(word->word.length()));
+		System.out.println(output);
+		
+		
+		//Group the word by length only if the length is more than 4
+		Map<Integer,List<String>>length4=words.stream().collect(Collectors.groupingBy(word->word.length()));
+		System.out.println(length4);
+	}
+
+}

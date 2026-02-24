@@ -1,0 +1,13 @@
+package com.practice.Advancedlevel;
+
+import java.util.*;
+
+public class Top3No {
+
+	public static void main(String[] args) {
+		List<Integer> list = Arrays.asList(10, 45, 23, 89, 67, 12, 89, 5);
+
+
+	}
+
+}

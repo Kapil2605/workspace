@@ -1,0 +1,18 @@
+package com.practice.questions;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class FindMaximum {
+
+	public static void main(String[] args) {
+		List<Integer>list=Arrays.asList(1,2,3,4,12,2,4,2,4,4);
+		int max=list.stream().max((a,b)->a-b).get();
+		System.out.println(max);
+		
+		int min=list.stream().min((a,b)->a-b).get();
+		System.out.println(min);
+
+	}
+
+}

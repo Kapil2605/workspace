@@ -1,0 +1,26 @@
+package com.practice.Advancedlevel;
+
+import java.util.*;
+import java.util.stream.Collectors;
+
+public class FindDuplicateWords {
+
+	public static void main(String[] args) {
+		String sentence = "java is fun and java is powerful and fun";
+		Set<String> duplicates =
+			    Arrays.stream(sentence.toLowerCase().split("\\s+"))
+			          .collect(Collectors.groupingBy(
+			              word -> word,
+			              Collectors.counting()
+			          ))
+			          .entrySet()
+			          .stream()
+			          .filter(e -> e.getValue() > 1)
+			          .map(Map.Entry::getKey)
+			          .collect(Collectors.toSet());
+
+			System.out.println(duplicates);
+
+	}
+
+}

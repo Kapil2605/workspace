@@ -1,0 +1,55 @@
+package in.main;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import in.resourcees.SpringConfigFile;
+
+/**
+ * Hello world!
+ *
+ */
+public class App
+
+{
+	public static void main(String[] args) {
+		ApplicationContext context = new AnnotationConfigApplicationContext(SpringConfigFile.class);
+
+		JdbcTemplate jdbcTemplate = context.getBean(JdbcTemplate.class);
+
+		/*
+		 * // -------------Insert query String name = "Kapil"; int rollno = 12; float
+		 * marks = 120f;
+		 * 
+		 * String insert_Query = "INSERT INTO STUDENT values(?,?,?)";
+		 * 
+		 * int cnt = jdbcTemplate.update(insert_Query, name, rollno, marks);
+		 * 
+		 * if (cnt > 0) { System.out.println("Insertion success"); }
+		 * 
+		 * else { System.out.println("Failed to insert"); }
+		 */
+		
+		
+		
+		
+		// -----------------update query
+		int updatedRollNo = 12;
+		float updatedMarks = 110f;
+
+		String update_Query = "UPDATE STUDENT SET marks=? WHERE roll=?";
+
+		int updatedCnt = jdbcTemplate.update(update_Query, updatedMarks, updatedRollNo); ✅
+
+		if (updatedCnt > 0) {
+			System.out.println("update success");
+		}
+
+		else {
+			System.out.println("Failed to update");
+		}
+
+	}
+
+}

@@ -1,0 +1,52 @@
+package com.Comparable;
+
+import java.util.*;
+
+class Student {
+
+    int age;
+    String name;
+
+    Student(int age, String name) {
+        this.age = age;
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Student [age=" + age + ", name=" + name + "]";
+    }
+}
+
+
+
+public class ComparatorWithDifferentClasses {
+
+    public static void main(String[] args) {
+
+        List<Student> list = new ArrayList<>();
+
+        list.add(new Student(23, "Kapil"));
+        list.add(new Student(21, "Aman"));
+        list.add(new Student(25, "Rohit"));
+        list.add(new Student(22, "Neha"));
+
+        System.out.println("Original List:");
+        list.forEach(System.out::println);
+
+        // 🔸 Age Ascending
+        Collections.sort(list, new AgeComparator());
+        System.out.println("\nSorted by Age (Ascending):");
+        list.forEach(System.out::println);
+
+        // 🔸 Name Ascending
+        Collections.sort(list, new NameComparator());
+        System.out.println("\nSorted by Name:");
+        list.forEach(System.out::println);
+
+        // 🔸 Age Descending
+        Collections.sort(list, new AgeDescComparator());
+        System.out.println("\nSorted by Age (Descending):");
+        list.forEach(System.out::println);
+    }
+}

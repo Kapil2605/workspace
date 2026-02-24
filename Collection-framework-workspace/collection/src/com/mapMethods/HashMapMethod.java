@@ -1,0 +1,36 @@
+package com.mapMethods;
+
+import java.util.*;
+import java.util.Map.Entry;
+
+public class HashMapMethod {
+
+	public static void main(String[] args) {
+		Map<Integer,String>mp=new HashMap<>();
+		
+		mp.put(130, "Deepak");
+		mp.put(13, "Aman");
+		mp.put(14, "Kapil");
+		mp.put(15, "Neha");
+		mp.put(16, "ashish");
+		
+		System.out.println(mp.containsKey(130)+" "+mp.containsValue("Aman"));
+//		Set set=mp.entrySet();
+//		//System.out.println(set);
+//		
+//		Iterator itr=set.iterator();
+//		
+//		while(itr.hasNext()) {
+//			//System.out.println(itr.next());
+//			
+//			Map.Entry<Integer,String>entry=(Entry<Integer, String>) itr.next();
+//			System.out.println(entry.getKey()+"->"+entry.getValue());
+//		}
+		
+		
+		for(Map.Entry<Integer, String>entry:mp.entrySet()) {
+			System.out.println(entry.getKey()+" "+entry.getValue());
+		}
+	}
+
+}

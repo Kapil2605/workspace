@@ -1,0 +1,36 @@
+package com.Comparable;
+
+
+class Student implements Comparable<Student>{
+	int age;
+	String name;
+	
+	Student(int _age,String _name){
+		this.age=_age;
+		this.name=_name;
+	}
+
+	@Override
+	public int compareTo(Student o) {
+		return this.age-o.age;
+	}
+
+	@Override
+	public String toString() {
+		
+		return "Student [age=" + age + ", name=" + name + "]";
+	}
+	
+	
+	
+}
+
+
+public class ComparableSortingExample {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

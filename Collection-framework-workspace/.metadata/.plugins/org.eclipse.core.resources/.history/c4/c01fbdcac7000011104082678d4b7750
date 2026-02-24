@@ -1,0 +1,10 @@
+package com.intermidiate.operation;
+
+public class NameSpliting {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

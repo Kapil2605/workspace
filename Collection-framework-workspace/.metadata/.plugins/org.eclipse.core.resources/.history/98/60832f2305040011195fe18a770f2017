@@ -1,0 +1,7 @@
+
+
+public class Snippet {
+	List<String> list =
+	    Arrays.asList("java", null, "python", null, "go", "spring");
+	
+}

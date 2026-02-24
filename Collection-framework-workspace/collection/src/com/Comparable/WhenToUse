@@ -1,0 +1,34 @@
+🟢 When to use Comparable
+👉 Use Comparable when:
+
+1️⃣ Natural / default sorting chahiye
+2️⃣ Sirf ONE sorting logic enough ho
+3️⃣ Tum class modify kar sakte ho
+4️⃣ Sorting fixed rehni hai (runtime change nahi)
+
+📌 Example use-case
+
+Student → sort by rollNo
+
+Employee → sort by id
+
+String → alphabetical order
+
+
+..................................................
+
+🔵 When to use Comparator
+👉 Use Comparator when:
+
+1️⃣ Multiple sorting logics chahiye
+2️⃣ Runtime pe sorting decide karni ho
+3️⃣ Class modify nahi kar sakte (3rd-party / library class)
+4️⃣ Sorting rules frequently change hote ho
+
+📌 Example use-case
+
+Sort Student by age / name / marks
+
+Sort Employee by salary / department / name
+
+UI sorting options (dropdown based)

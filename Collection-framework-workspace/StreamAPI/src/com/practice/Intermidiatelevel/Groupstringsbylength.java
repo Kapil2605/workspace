@@ -1,0 +1,17 @@
+package com.practice.Intermidiatelevel;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+public class Groupstringsbylength {
+
+	public static void main(String[] args) {
+		List<String> list = Arrays.asList("java", "python", "java", "c++", "python", "go");
+		
+		Map<Integer,List<String>>result=list.stream().collect(Collectors.groupingBy(n->n.length()));
+		System.out.println(result);
+	}
+
+}

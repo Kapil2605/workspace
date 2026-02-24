@@ -1,0 +1,18 @@
+package com.mapMethods;
+
+import java.util.*;
+
+public class HashMapMethod {
+
+	public static void main(String[] args) {
+		Map<Integer,String>mp=new HashMap<>();
+		
+		mp.put(130, "Deepak");
+		mp.put(13, "Aman");
+		mp.put(14, "Kapil");
+		mp.put(15, "Neha");
+		mp.put(16, "ashish");
+
+	}
+
+}

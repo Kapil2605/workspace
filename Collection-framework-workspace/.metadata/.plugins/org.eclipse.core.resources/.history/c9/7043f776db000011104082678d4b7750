@@ -1,0 +1,13 @@
+package com.intermidiate2;
+
+public class FindNonRepeating {
+
+	public static void main(String[] args) {
+		String str="swiss";
+		
+		Character ch=str.chars().mapToObj(c-> (char)c)
+				.filter(c->str.indexOf(c)==str.lastIndexOf(c)).findFirst().orElse(null);
+		
+	}
+
+}

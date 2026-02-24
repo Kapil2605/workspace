@@ -1,0 +1,13 @@
+package com.practice.Intermidiatelevel;
+
+import java.util.*;
+
+public class FindLongestString {
+
+	public static void main(String[] args) {
+		List<String> list =Arrays.asList("java", "python", "java", "c++", "python", "go");
+		String resultingString=list.stream().sorted((a,b)->b.length()-a.length()).findFirst().get();
+		System.out.println(resultingString);
+	}
+
+}

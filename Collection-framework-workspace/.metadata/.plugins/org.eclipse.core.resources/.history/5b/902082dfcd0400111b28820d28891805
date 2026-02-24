@@ -1,0 +1,15 @@
+🟢 When to use Comparable
+👉 Use Comparable when:
+
+1️⃣ Natural / default sorting chahiye
+2️⃣ Sirf ONE sorting logic enough ho
+3️⃣ Tum class modify kar sakte ho
+4️⃣ Sorting fixed rehni hai (runtime change nahi)
+
+📌 Example use-case
+
+Student → sort by rollNo
+
+Employee → sort by id
+
+String → alphabetical order

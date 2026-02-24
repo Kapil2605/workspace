@@ -1,0 +1,24 @@
+package com.practice.Advancedlevel;
+class Employee{
+	int id;
+    String name;
+    String department;
+
+    Employee(int id, String name, String department) {
+        this.id = id;
+        this.name = name;
+        this.department = department;
+    }
+
+    public String getDepartment() {
+        return department;
+    }
+}
+public class Groupemployeesbydepartment {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

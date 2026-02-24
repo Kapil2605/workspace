@@ -1,0 +1,12 @@
+package com.practice.Advancedlevel;
+
+import java.util.*;
+
+public class SortMap {
+
+	public static void main(String[] args) {
+		Map<String,Integer>mp=new HashMap<>();
+
+	}
+
+}

@@ -1,0 +1,10 @@
+package com.practice.level2;
+
+public class FindFrequency {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
