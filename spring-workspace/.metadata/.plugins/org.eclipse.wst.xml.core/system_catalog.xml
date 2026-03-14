@@ -210,4 +210,5 @@
   <uri name="http://xmlns.jcp.org/xml/ns/javaee/web-partialresponse_2_0.xsd" uri="jar:file:/C:/Users/kapil/eclipse/java-2025-09/eclipse/../../../.p2/pool/plugins/org.eclipse.jst.standard.schemas_1.2.700.v202409140028.jar!/dtdsAndSchemas/web-partialresponse_2_0.xsd"/>
   <uri name="http://xmlns.jcp.org/xml/ns/javaee/web-partialresponse_2_2.xsd" uri="jar:file:/C:/Users/kapil/eclipse/java-2025-09/eclipse/../../../.p2/pool/plugins/org.eclipse.jst.standard.schemas_1.2.700.v202409140028.jar!/dtdsAndSchemas/web-partialresponse_2_2.xsd"/>
   <uri name="http://xmlns.jcp.org/xml/ns/javaee/web-partialresponse_2_3.xsd" uri="jar:file:/C:/Users/kapil/eclipse/java-2025-09/eclipse/../../../.p2/pool/plugins/org.eclipse.jst.standard.schemas_1.2.700.v202409140028.jar!/dtdsAndSchemas/web-partialresponse_2_3.xsd"/>
+  <public publicId="-//LOG4J//DTD LOG4J//EN" uri="jar:file:/C:/Users/kapil/eclipse/java-2025-09/eclipse/../../../.p2/pool/plugins/org.springsource.ide.eclipse.commons.ui_5.0.1.202512191927.jar!/dtd/log4j-1.2.dtd" webURL="https://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/xml/doc-files/log4j.dtd"/>
 </catalog>

@@ -10,6 +10,10 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="D:\workspaces\java-workspace\JDBC"/>
+			<item value="D:\workspaces\java-workspace\calculator-junit5"/>
+			<item value="D:\workspaces\java-workspace\JUnitDemo"/>
+			<item value="D:\workspaces\java-workspace\Junit5_demo"/>
 			<item value="D:\workspaces\advance-workspace\helloworld"/>
 		</list>
 		<section name="SmartImportWizard.dialogBounds">
