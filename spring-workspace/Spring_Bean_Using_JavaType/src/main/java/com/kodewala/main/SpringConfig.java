@@ -3,10 +3,11 @@ package com.kodewala.main;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-@Configuration
+@Configuration ///this class is responsible for bean defination
 public class SpringConfig {
 	
-	@Bean("user")
+	//define bean
+	@Bean("acc")
 	public User createUser() {
 		User user=new User();
 		user.setFirstName("Kodewala");

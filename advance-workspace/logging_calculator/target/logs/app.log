@@ -1,0 +1,10 @@
+2026-03-25 17:05:24,445 INFO  com.kapil.App - Application started
+2026-03-25 17:05:24,448 TRACE com.kapil.Calculator - divide() called
+2026-03-25 17:05:24,448 DEBUG com.kapil.Calculator - Values: 10 , 2
+2026-03-25 17:05:24,448 INFO  com.kapil.Calculator - Result = 5
+2026-03-25 17:05:24,448 TRACE com.kapil.Calculator - divide() called
+2026-03-25 17:05:24,448 DEBUG com.kapil.Calculator - Values: 5 , 0
+2026-03-25 17:05:24,448 ERROR com.kapil.Calculator - Cannot divide by zero
+2026-03-25 17:05:24,448 WARN  com.kapil.App - This is warning
+2026-03-25 17:05:24,448 FATAL com.kapil.App - Fatal message
+2026-03-25 17:05:24,448 INFO  com.kapil.App - Application finished

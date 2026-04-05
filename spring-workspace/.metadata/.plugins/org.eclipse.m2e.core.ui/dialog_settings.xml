@@ -2,6 +2,11 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="D:\workspaces\spring-workspace\Spring_Dependency_Injection_autowired"/>
+			<item value="D:\workspaces\spring-workspace\Spring_Dependency_Injection"/>
+			<item value="D:\workspaces\spring-workspace\Spring_bean_using_Annotation"/>
+			<item value="D:\workspaces\spring-workspace\Spring_Bean_Using_JavaType"/>
+			<item value="D:\workspaces\spring-workspace\Spring_bean_using_XML_type_2\src\main\java"/>
 			<item value="D:\workspaces\spring-workspace"/>
 			<item value="D:\workspaces\spring-workspace\MySpringApp"/>
 			<item value="D:\workspaces\spring-workspace\SpringCore\pom.xml"/>
@@ -33,20 +38,17 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="com.kodewala.springmvc_kodewala"/>
-			<item value="com.kapil.spring_mvc_tomcat10"/>
-			<item value="com.telusko.DEMOMVC"/>
-			<item value="com.telusko"/>
+			<item value="com.main"/>
+			<item value="com.kodewala.Spring_Dependency_Injection_using_getterSetter"/>
 		</list>
 		<list key="groupId">
 			<item value="com.kodewala"/>
-			<item value="com.kapil"/>
-			<item value="com.telusko"/>
 		</list>
 		<list key="artifactId">
-			<item value="springmvc-kodewala"/>
-			<item value="spring-mvc-tomcat10"/>
-			<item value="DEMOMVC"/>
+			<item value="Spring_Dependency_injection_qualifier"/>
+			<item value="Spring_Dependency_Injection_using_getterSetter"/>
+			<item value="Spring_bean_using_Annotation_2"/>
+			<item value="Spring_Bean_Using_JavaType_2"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

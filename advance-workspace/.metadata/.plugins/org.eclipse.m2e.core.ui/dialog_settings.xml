@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="D:\workspaces\advance-workspace\logging"/>
 			<item value="D:\workspaces\advance-workspace\MavenProgram2\pom.xml"/>
 			<item value="D:\workspaces\advance-workspace\MavenProgram1\pom.xml"/>
 		</list>
@@ -27,8 +28,9 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="com.JDBC"/>
 			<item value="com.kapil"/>
+			<item value="com.logging"/>
+			<item value="com.JDBC"/>
 			<item value="com.kapil.junitProgram1"/>
 			<item value="com.kapil.MavenProgram2"/>
 			<item value="com.kapil.MavenProgram1"/>
@@ -37,6 +39,8 @@
 			<item value="com.kapil"/>
 		</list>
 		<list key="artifactId">
+			<item value="logging_calculator"/>
+			<item value="logging"/>
 			<item value="CSVFileJDBC"/>
 			<item value="Jdbc_Quickstart"/>
 			<item value="junitProgram1"/>

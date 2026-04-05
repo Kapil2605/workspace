@@ -7,7 +7,7 @@ public class Driver {
 
 	public static void main(String[] args) {
 		ApplicationContext context=new AnnotationConfigApplicationContext(SpringConfig.class);
-		User user=context.getBean(User.class);
+		User user=(User) context.getBean("acc");
 		System.out.println(user.getEmail());
 	}
 

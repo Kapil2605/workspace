@@ -1,0 +1,8 @@
+2026-03-25 16:54:47 [main] INFO  com.logging.App - Program started
+2026-03-25 16:54:47 [main] ERROR com.logging.App - Exception occurred
+java.lang.ArithmeticException: / by zero
+	at com.logging.App.main(App.java:16)
+2026-03-25 16:54:47 [main] DEBUG com.logging.App - Debug message
+2026-03-25 16:54:47 [main] WARN  com.logging.App - Warning message
+2026-03-25 16:54:47 [main] FATAL com.logging.App - Fatal message
+2026-03-25 16:54:47 [main] INFO  com.logging.App - Program finished

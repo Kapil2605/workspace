@@ -11,4 +11,6 @@
     <fullyQualifiedTypeName name="com.kapil.DBConnection"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="com.JDBC.transaction.FundTransfer"/>
+    <fullyQualifiedTypeName name="java.util.logging.LogManager"/>
+    <fullyQualifiedTypeName name="org.apache.logging.log4j.LogManager"/>
 </qualifiedTypeNameHistroy>
