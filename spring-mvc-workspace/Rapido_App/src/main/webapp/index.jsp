@@ -1,5 +1,6 @@
 <html>
 <body>
-<h2>Hello World!</h2>
+<h2>Welcome to Rapido Taxi</h2>
+<a href="loginPage">Click me, Login</a>
 </body>
 </html>

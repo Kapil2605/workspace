@@ -26,12 +26,14 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="in.main"/>
 			<item value="in.kodewala"/>
 		</list>
 		<list key="groupId">
 			<item value="in.kodewala"/>
 		</list>
 		<list key="artifactId">
+			<item value="Rapido_App"/>
 			<item value="Spring-web-mvc-1"/>
 		</list>
 		<list key="projectNameTemplate">
