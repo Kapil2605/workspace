@@ -26,13 +26,14 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="in.main"/>
 			<item value="in.kodewala"/>
+			<item value="in.main"/>
 		</list>
 		<list key="groupId">
 			<item value="in.kodewala"/>
 		</list>
 		<list key="artifactId">
+			<item value="Zepto-Products"/>
 			<item value="Rapido_App"/>
 			<item value="Spring-web-mvc-1"/>
 		</list>
@@ -45,8 +46,8 @@
 			<item value="[name]"/>
 		</list>
 		<list key="version">
-			<item value="1.0"/>
 			<item value="0.0.1-SNAPSHOT"/>
+			<item value="1.0"/>
 		</list>
 	</section>
 	<section name="MavenProjectWizardArtifactPage">

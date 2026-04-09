@@ -142,7 +142,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="D:\workspaces\spring-mvc-workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="D:\workspaces\spring-mvc-workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\spring-mvc-controller-layer" path="/Spring-mvc-2" reloadable="true" source="org.eclipse.jst.jee.server:spring-mvc-controller-layer"/></Host>
+      <Context docBase="D:\workspaces\spring-mvc-workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="D:\workspaces\spring-mvc-workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Zepto-Products" path="/Zepto-Products" reloadable="true" source="org.eclipse.jst.jee.server:Zepto-Products"/></Host>
     </Engine>
   </Service>
 </Server>
