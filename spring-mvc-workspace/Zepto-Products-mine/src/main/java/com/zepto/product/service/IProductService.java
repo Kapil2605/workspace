@@ -16,4 +16,9 @@ public interface IProductService {
 	//get product by id
 	public ProductEntity getById(String id);
 	
+	//delete product
+	public String deleteById(String id);
+	
+	String updateProduct(ProductRequest request);
+	
 }

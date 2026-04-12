@@ -67,5 +67,38 @@ public class ProductController {
 	    
 	    return "display-product-by-id"; 
 	}
+	
+	// delete product by id
+	@GetMapping("deleteProduct")
+	@ResponseBody
+	public String deleteProduct(@RequestParam("productId") String id, Model model) {
+
+	    String response = iProductService.deleteById(id);
+
+	    model.addAttribute("msg", response);
+
+	    return "delete-success"; 
+	}
+	
+	//go to edit form page
+	@GetMapping("editProduct")
+	public String editProduct(@RequestParam("productId") String id, Model model) {
+
+	    ProductEntity product = iProductService.getById(id);
+
+	    model.addAttribute("product", product);
+
+	    return "edit-product"; 
+	}
+	
+	@PostMapping("updateProduct")
+	public String updateProduct(@ModelAttribute ProductRequest request, Model model) {
+
+	    String response = iProductService.updateProduct(request);
+
+	    model.addAttribute("response", response);
+
+	    return "update-success";
+	}
 }
 

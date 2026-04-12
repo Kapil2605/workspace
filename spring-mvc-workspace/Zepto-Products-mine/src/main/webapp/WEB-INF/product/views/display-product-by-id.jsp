@@ -79,7 +79,11 @@
         <span class="label">Sold By:</span>
         <span class="value">${product.soldBy}</span>
     </div>
-
+	<a href="editProduct?productId=${product.productId}">
+    <button>Update</button>
+	<a href="deleteProduct?productId=${product.productId}">
+    <button>Delete</button>
+</a>
 </div>
 
 </body>

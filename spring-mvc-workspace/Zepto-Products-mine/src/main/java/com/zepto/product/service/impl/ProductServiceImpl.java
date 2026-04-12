@@ -67,4 +67,38 @@ public class ProductServiceImpl implements IProductService {
 	    return productRepository.getProductById(id);
 	}
 	
+	@Override
+	@Transactional
+	public String deleteById(String id) {
+
+	    boolean deleteStatus = productRepository.deleteProduct(id);
+
+	    if (deleteStatus) {
+	        return "Product Deleted Successfully";
+	    } else {
+	        return "Product Not Found";
+	    }
+	}
+
+
+	@Override
+	@Transactional
+	public String updateProduct(ProductRequest request) {
+
+		ProductEntity product = new ProductEntity();
+		product.setProductId(product.productId);
+	    product.setName(request.getProductName());
+	    product.setQty(request.getQty());
+	    product.setDescription(request.getDescription());
+	    product.setPrice(request.getPrice());
+	    product.setSoldBy(request.getSoldBy());
+
+	    productRepository.updateProductDetails(product);
+
+	    return "Product Updated Successfully";
+	}
+	
+	
+	//update product logic
+	
 }

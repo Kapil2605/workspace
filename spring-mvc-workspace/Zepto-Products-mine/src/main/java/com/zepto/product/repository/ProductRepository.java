@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.zepto.product.entity.ProductEntity;
+import com.zepto.product.request.ProductRequest;
 
 // responsible for data base interaction(CRUD --> Create Update Read and Delete) 
 @Repository
@@ -42,17 +43,22 @@ public class ProductRepository {
         return sessionFactory.getCurrentSession().get(ProductEntity.class, id);
     }
     
-//    // UPDATE
-//    public void updateProduct(ProductEntity product) {
-//        sessionFactory.getCurrentSession().merge(product);
-//    }
+    // UPDATE
+    public void updateProductDetails(ProductEntity product) {
+		sessionFactory.getCurrentSession().merge(product);
+		
+	}
 //
 //    // DELETE
-//    public void deleteProduct(String id) {
-//        ProductEntity product = sessionFactory.getCurrentSession().get(ProductEntity.class, id);
-//        if (product != null) {
-//            sessionFactory.getCurrentSession().delete(product);
-//        }
-//    }
+    public boolean deleteProduct(String id) {
+        ProductEntity product = sessionFactory.getCurrentSession().get(ProductEntity.class, id);
+        if (product != null) {
+            sessionFactory.getCurrentSession().delete(product);
+            return true;
+        }
+		return false;
+    }
+
+	
 
 }
