@@ -19,6 +19,6 @@ public interface IProductService {
 	//delete product
 	public String deleteById(String id);
 	
-	String updateProduct(ProductRequest request);
+	String updateProduct(ProductRequest request,String id);
 	
 }

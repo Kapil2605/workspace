@@ -92,9 +92,10 @@ public class ProductController {
 	}
 	
 	@PostMapping("updateProduct")
-	public String updateProduct(@ModelAttribute ProductRequest request, Model model) {
+	@ResponseBody
+	public String updateProduct(@ModelAttribute ProductRequest request,@RequestParam("productId") String id, Model model) {
 
-	    String response = iProductService.updateProduct(request);
+	    String response = iProductService.updateProduct(request,id);
 
 	    model.addAttribute("response", response);
 

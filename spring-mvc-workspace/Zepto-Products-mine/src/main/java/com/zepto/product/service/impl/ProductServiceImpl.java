@@ -83,16 +83,23 @@ public class ProductServiceImpl implements IProductService {
 
 	@Override
 	@Transactional
-	public String updateProduct(ProductRequest request) {
+	public String updateProduct(ProductRequest request, String id) {
 
-		ProductEntity product = new ProductEntity();
-		product.setProductId(product.productId);
+		// fetch existing product using ID
+	    ProductEntity product = productRepository.getProductById(id);
+
+	    if (product == null) {
+	        return "Product Not Found";
+	    }
+
+	    // update only fields
 	    product.setName(request.getProductName());
 	    product.setQty(request.getQty());
 	    product.setDescription(request.getDescription());
 	    product.setPrice(request.getPrice());
 	    product.setSoldBy(request.getSoldBy());
 
+	    // no need to set ID again
 	    productRepository.updateProductDetails(product);
 
 	    return "Product Updated Successfully";
