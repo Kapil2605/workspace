@@ -32,6 +32,7 @@
 			<item value="com.kodewala"/>
 		</list>
 		<list key="artifactId">
+			<item value="Amazon-Ecommerce"/>
 			<item value="Student-Management-CRUD-MVC-hibernate"/>
 		</list>
 		<list key="projectNameTemplate">
