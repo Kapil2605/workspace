@@ -32,6 +32,7 @@
 			<item value="com.kodewala"/>
 		</list>
 		<list key="artifactId">
+			<item value="Spring-mvc-practice"/>
 			<item value="Amazon-Ecommerce"/>
 			<item value="Student-Management-CRUD-MVC-hibernate"/>
 		</list>
@@ -44,8 +45,8 @@
 			<item value="[name]"/>
 		</list>
 		<list key="version">
-			<item value="1.0"/>
 			<item value="0.0.1-SNAPSHOT"/>
+			<item value="1.0"/>
 		</list>
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
