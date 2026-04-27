@@ -15,5 +15,13 @@ Enter Product Price1:<input type="text" name="price1"/>
 Enter Product Price2:<input type="text" name="price2"/>
 <input type="submit" value="Search by Price Range"/>
 </form>
+
+
+<form action="searchByPriceAndStock" method="get">
+Enter Product Price:<input type="text" name="price"/>
+Enter Product Stock_quantity:<input type="text" name="stockQuantity"/>
+<input type="submit" value="Search by Price and qty"/>
+</form>
+
 </body>
 </html>

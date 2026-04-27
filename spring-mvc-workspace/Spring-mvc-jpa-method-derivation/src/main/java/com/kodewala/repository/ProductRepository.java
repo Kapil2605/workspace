@@ -25,4 +25,43 @@ public interface ProductRepository extends JpaRepository<Product, Long>{
 //	
 	List<Product> findByPriceBetween(float price1,float price2);
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	@Query("select p from Product p where p.price=:price and p.stockQuantity=:stockQuantity")
+	List<Product> test(@Param("price") float price,@Param("stockQuantity") int stockQuantity);
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

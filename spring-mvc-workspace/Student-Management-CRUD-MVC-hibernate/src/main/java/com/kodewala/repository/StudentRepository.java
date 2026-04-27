@@ -15,7 +15,7 @@ public class StudentRepository {
 	@Autowired
 	private SessionFactory sessionFactory;
 	
-	@Transactional
+	//@Transactional
 	public Student addStudent(Student std) {
 		 sessionFactory.getCurrentSession().save(std);
 		 return std;

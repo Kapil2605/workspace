@@ -28,8 +28,8 @@ public class Product {
     @Column
     private float price;
 
-    @Column
-    private int stock_quantity;
+    @Column(name = "stock_quantity")
+    private int stockQuantity;
 
     
 	public int getId() {
@@ -40,13 +40,13 @@ public class Product {
 		this.id = id;
 	}
 
-//	public String getName() {
-//		return name;
-//	}
-//
-//	public void setName(String name) {
-//		this.name = name;
-//	}
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
 
 	public String getDescription() {
 		return description;
@@ -64,12 +64,12 @@ public class Product {
 		this.price = price;
 	}
 
-	public int getStock_quantity() {
-		return stock_quantity;
+	public int getStockQuantity() {
+	    return stockQuantity;
 	}
 
-	public void setStock_quantity(int stock_quantity) {
-		this.stock_quantity = stock_quantity;
+	public void setStockQuantity(int stockQuantity) {
+	    this.stockQuantity = stockQuantity;
 	}
     
     

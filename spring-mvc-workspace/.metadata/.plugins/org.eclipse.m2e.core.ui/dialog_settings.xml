@@ -26,12 +26,15 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.ecommerce"/>
 			<item value="com.kodewala"/>
 		</list>
 		<list key="groupId">
+			<item value="com.ecommerce"/>
 			<item value="com.kodewala"/>
 		</list>
 		<list key="artifactId">
+			<item value="spring-mvc-mapping-ecommerce"/>
 			<item value="Spring-mvc-practice"/>
 			<item value="Amazon-Ecommerce"/>
 			<item value="Student-Management-CRUD-MVC-hibernate"/>

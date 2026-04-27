@@ -37,4 +37,16 @@ public class ProductController {
 		model.addAttribute("product", prd);
 		return "display-product";
 	}
+	
+	
+	
+	@GetMapping("/searchByPriceAndStock")
+	public String searchPriceAndQty( @RequestParam("price") float price, @RequestParam("stockQuantity") int stockQuantity,  Model model) {
+		System.out.println("price"+price);
+		System.out.println("stockQuantity"+stockQuantity);
+		List<Product>prd=productService.searchProductsByPriceQty(price,stockQuantity);
+		System.out.println(prd);
+		model.addAttribute("product", prd);
+		return "display-product";
+	}
 }

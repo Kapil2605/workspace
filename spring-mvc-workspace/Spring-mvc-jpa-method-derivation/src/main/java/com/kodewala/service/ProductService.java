@@ -23,4 +23,8 @@ public class ProductService {
 	public List<Product> searchProductsByPrice(float price1 ,float price2) {
 		return productRepository.findByPriceBetween(price1,price2);
 	}
+
+	public List<Product> searchProductsByPriceQty(float price, int stockQuantity) {
+		return productRepository.test(price, stockQuantity);
+	}
 }

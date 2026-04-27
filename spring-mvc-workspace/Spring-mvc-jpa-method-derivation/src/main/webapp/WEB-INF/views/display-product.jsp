@@ -18,6 +18,7 @@
     <tr>
         <th>ID</th>
         <th>Price</th>
+        <th>Name<th>
         <th>Description<th>
         <th>Quantity</th>
     </tr>
@@ -30,9 +31,10 @@
 %>
     <tr>
         <td><%= item.getId() %></td>
+        <td><%= item.getName() %></td>
         <td><%= item.getPrice() %></td>
         <td><%= item.getDescription() %></td>
-        <td><%= item.getStock_quantity() %></td>
+        <td><%= item.getStockQuantity() %></td>
     </tr>
 <%
         }

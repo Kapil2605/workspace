@@ -142,7 +142,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="Spring-mvc-jpa-mapping" path="/Spring-mvc-jpa-method-derivation" reloadable="true" source="org.eclipse.jst.jee.server:Spring-mvc-jpa-mapping"/></Host>
+      <Context docBase="Spring-mvc-jpa-lazyVsEager" path="/Spring-mvc-jpa-method-derivation" reloadable="true" source="org.eclipse.jst.jee.server:Spring-mvc-jpa-lazyVsEager"/></Host>
     </Engine>
   </Service>
 </Server>
