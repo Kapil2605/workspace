@@ -1,0 +1,56 @@
+🔹 Common Ways to Use ResponseEntity
+
+1. Return with Status Code:
+
+	@GetMapping("/success")
+	public ResponseEntity<String> success() {
+	    return new ResponseEntity<>("Success", HttpStatus.OK);
+	}
+
+2. Return Object as JSON:
+	@GetMapping("/user")
+	public ResponseEntity<User> getUser() {
+	    User user = new User(1, "John");
+	    return ResponseEntity.ok(user);
+	}
+	Spring automatically converts the object to JSON.
+
+
+3. Custom Status Codes:
+	@PostMapping("/create")
+	public ResponseEntity<String> create() {
+	    return ResponseEntity.status(HttpStatus.CREATED)
+	                         .body("Created successfully");
+	}
+
+4. Return No Content
+	@DeleteMapping("/delete/{id}")
+	public ResponseEntity<Void> delete(@PathVariable int id) {
+	    return ResponseEntity.noContent().build();
+	}
+
+5. Return Headers:
+	@GetMapping("/headers")
+	public ResponseEntity<String> headers() {
+	    return ResponseEntity.ok()
+	            .header("Custom-Header", "Value")
+	            .body("With headers");
+	}
+
+6. Handle Not Found:
+	@GetMapping("/user/{id}")
+	public ResponseEntity<User> getUser(@PathVariable int id) {
+	    User user = userService.findById(id);
+	
+	    if (user == null) {
+	        return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+	    }
+	
+	    return ResponseEntity.ok(user);
+	}
+
+🔹 Why Use ResponseEntity?
+	`Control HTTP response fully
+	Return proper REST status codes
+	Add custom headers
+	Handle errors cleanly`

@@ -1,0 +1,21 @@
+2026-05-08T00:10:07.660+05:30  INFO 19856 --- [main] c.kodewala.LoggingPracticeApplication    : Starting LoggingPracticeApplication using Java 23.0.2 with PID 19856 (D:\workspaces\spring-boot-workspace\Logging-Practice\target\classes started by kapil in D:\workspaces\spring-boot-workspace\Logging-Practice)
+2026-05-08T00:10:07.662+05:30 DEBUG 19856 --- [main] c.kodewala.LoggingPracticeApplication    : Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-08T00:10:07.663+05:30  INFO 19856 --- [main] c.kodewala.LoggingPracticeApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-05-08T00:10:08.186+05:30  INFO 19856 --- [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-05-08T00:10:08.197+05:30  INFO 19856 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-08T00:10:08.198+05:30  INFO 19856 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-08T00:10:08.235+05:30  INFO 19856 --- [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 529 ms
+2026-05-08T00:10:08.510+05:30  INFO 19856 --- [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-05-08T00:10:08.515+05:30  INFO 19856 --- [main] c.kodewala.LoggingPracticeApplication    : Started LoggingPracticeApplication in 1.182 seconds (process running for 1.619)
+2026-05-08T00:10:15.280+05:30  INFO 19856 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-08T00:10:15.281+05:30  INFO 19856 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-08T00:10:15.284+05:30  INFO 19856 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-05-08T00:10:15.355+05:30  INFO 19856 --- [http-nio-8080-exec-1] HomeController.class                     : hello kapil
+2026-05-08T00:10:15.355+05:30  WARN 19856 --- [http-nio-8080-exec-1] HomeController.class                     : hello kapil
+2026-05-08T00:10:15.355+05:30 ERROR 19856 --- [http-nio-8080-exec-1] HomeController.class                     : hello kapil
+2026-05-08T00:11:14.932+05:30  INFO 19856 --- [http-nio-8080-exec-2] HomeController.class                     : hello amit
+2026-05-08T00:11:14.933+05:30  WARN 19856 --- [http-nio-8080-exec-2] HomeController.class                     : hello amit
+2026-05-08T00:11:14.934+05:30 ERROR 19856 --- [http-nio-8080-exec-2] HomeController.class                     : hello amit
+2026-05-08T00:28:45.509+05:30  INFO 19856 --- [RMI TCP Connection(22)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-05-08T00:28:45.528+05:30  INFO 19856 --- [RMI TCP Connection(22)-127.0.0.1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-08T00:28:45.543+05:30  INFO 19856 --- [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete

@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.kodewala.entity.User;
+import com.kodewala.exception.UserNotFoundException;
 import com.kodewala.services.UserService;
 
 @RestController
@@ -41,7 +42,7 @@ public class MyController {
 			return ResponseEntity.ok().body(user);
 		}
 		else {
-			return ResponseEntity.notFound().build();
+			throw new UserNotFoundException("User not found");
 		}
 	}
 	

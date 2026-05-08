@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.demo.external.Rating;
 
-@FeignClient(name="RATING-SERVICE")
+@FeignClient(name = "RATING-SERVICE")
 public interface RatingService {
 
-@GetMapping("/ratings/user/{userId}")
-List<Rating> getRatings(@PathVariable int userId);
+	@GetMapping("/ratings/user/{userId}")
+	List<Rating> getRatings(@PathVariable int userId);
 
 }

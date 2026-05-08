@@ -12,16 +12,16 @@ import com.demo.repository.RatingRepository;
 @RequestMapping("/ratings")
 public class RatingController {
 
-@Autowired
-private RatingRepository repo;
+	@Autowired
+	private RatingRepository repo;
 
-@PostMapping
-public Rating save(@RequestBody Rating r){
- return repo.save(r);
-}
+	@PostMapping
+	public Rating save(@RequestBody Rating r) {
+		return repo.save(r);
+	}
 
-@GetMapping("/user/{userId}")
-public List<Rating> getByUser(@PathVariable int userId){
- return repo.findByUserId(userId);
-}
+	@GetMapping("/user/{userId}")
+	public List<Rating> getByUser(@PathVariable int userId) {
+		return repo.findByUserId(userId);
+	}
 }

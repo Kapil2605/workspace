@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="D:\antigravity-workspace\kodecart"/>
 			<item value="D:\workspaces\spring-mvc-workspace"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -26,14 +27,19 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.kodecart"/>
+			<item value="com.kodecart.KodeCart"/>
 			<item value="com.ecommerce"/>
 			<item value="com.kodewala"/>
 		</list>
 		<list key="groupId">
+			<item value="com.kodecart"/>
 			<item value="com.ecommerce"/>
 			<item value="com.kodewala"/>
 		</list>
 		<list key="artifactId">
+			<item value="KodeCart"/>
+			<item value="Kode-Cart"/>
 			<item value="spring-mvc-mapping-ecommerce"/>
 			<item value="Spring-mvc-practice"/>
 			<item value="Amazon-Ecommerce"/>
@@ -48,8 +54,8 @@
 			<item value="[name]"/>
 		</list>
 		<list key="version">
-			<item value="0.0.1-SNAPSHOT"/>
 			<item value="1.0"/>
+			<item value="0.0.1-SNAPSHOT"/>
 		</list>
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
