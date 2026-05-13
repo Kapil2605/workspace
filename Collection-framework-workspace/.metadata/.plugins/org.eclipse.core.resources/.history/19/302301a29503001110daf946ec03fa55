@@ -1,9 +1,0 @@
-package com.practice.questions;
-//Join list of strings using comma separator
-public class JoiningList {
-
-	public static void main(String[] args) {
-		
-	}
-
-}
