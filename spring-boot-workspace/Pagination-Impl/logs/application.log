@@ -1,0 +1,9 @@
+2026-05-13T16:37:49.910+05:30  INFO 20000 --- [Pagination-Impl] [main] com.kodewala.PaginationImplApplication   : Starting PaginationImplApplication using Java 23.0.2 with PID 20000 (D:\workspaces\spring-boot-workspace\Pagination-Impl\target\classes started by kapil in D:\workspaces\spring-boot-workspace\Pagination-Impl)
+2026-05-13T16:37:49.912+05:30 DEBUG 20000 --- [Pagination-Impl] [main] com.kodewala.PaginationImplApplication   : Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-13T16:37:49.913+05:30  INFO 20000 --- [Pagination-Impl] [main] com.kodewala.PaginationImplApplication   : The following 1 profile is active: "dev"
+2026-05-13T16:37:53.894+05:30  INFO 20000 --- [Pagination-Impl] [main] com.kodewala.PaginationImplApplication   : Started PaginationImplApplication in 4.45 seconds (process running for 5.119)
+2026-05-13T16:38:24.191+05:30  INFO 20000 --- [Pagination-Impl] [http-nio-8080-exec-1] c.k.controller.EmployeeController        : Create Employee API
+2026-05-13T16:38:24.192+05:30 DEBUG 20000 --- [Pagination-Impl] [http-nio-8080-exec-1] c.k.controller.EmployeeController        : Employee Request: name=Kapil Rao, dept=dev
+2026-05-13T16:38:24.192+05:30  INFO 20000 --- [Pagination-Impl] [http-nio-8080-exec-1] com.kodewala.service.EmployeeService     : Creating employee in service layer
+2026-05-13T16:38:24.353+05:30  INFO 20000 --- [Pagination-Impl] [http-nio-8080-exec-1] com.kodewala.service.EmployeeService     : Employee saved in DB with id=8
+2026-05-13T16:38:24.353+05:30  INFO 20000 --- [Pagination-Impl] [http-nio-8080-exec-1] c.k.controller.EmployeeController        : Employee created successfully with id=8
