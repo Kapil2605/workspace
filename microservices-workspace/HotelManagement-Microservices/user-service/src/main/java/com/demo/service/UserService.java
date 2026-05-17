@@ -9,32 +9,51 @@ import com.demo.entity.User;
 import com.demo.external.Rating;
 import com.demo.repository.UserRepository;
 
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import jakarta.transaction.Transactional;
 
 @Service
 public class UserService {
  
-@Autowired
-private UserRepository repo;
+	@Autowired
+	private UserRepository repo;
+	
+	@Autowired
+	private RatingService ratingService;
+	
+	@Transactional
+	public User save(User user){
+		System.out.println("user  name: "+user.getName());
+		System.out.println("user  email: "+user.getEmail());
+	 return repo.save(user);
+	}
+	
+	@CircuitBreaker(name = "ratingHotelBreaker", fallbackMethod = "ratingHotelFallback")
+	public User getUser(int id){
+	
+		 User user=repo.findById(id).get();
+		
+		 List<Rating> ratings=ratingService.getRatings(id);
+		
+		 user.setRatings(ratings);
+		
+		 return user;
+	}
+	
+	// Fallback Method
+    public User ratingHotelFallback(int id, Exception ex) {
 
-@Autowired
-private RatingService ratingService;
+        System.out.println("Fallback executed because service is down");
 
-@Transactional
-public User save(User user){
-	System.out.println("user  name: "+user.getName());
-	System.out.println("user  email: "+user.getEmail());
- return repo.save(user);
-}
+        User user = repo.findById(id).get();
 
-public User getUser(int id){
+        Rating rating = new Rating();
 
- User user=repo.findById(id).get();
+        rating.setRating(0);
+        rating.setFeedback("Rating Service is temporarily unavailable");
 
- List<Rating> ratings=ratingService.getRatings(id);
+        user.setRatings(List.of(rating));
 
- user.setRatings(ratings);
-
- return user;
-}
+        return user;
+    }
 }
