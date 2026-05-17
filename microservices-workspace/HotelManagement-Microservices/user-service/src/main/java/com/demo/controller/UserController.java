@@ -1,5 +1,7 @@
 package com.demo.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,5 +27,10 @@ public class UserController {
 	@GetMapping("/{id}")
 	public User get(@PathVariable int id) {
 		return service.getUser(id);
+	}
+	
+	@GetMapping("/all")
+	public List<User> get() {
+		return service.getAllUser();
 	}
 }

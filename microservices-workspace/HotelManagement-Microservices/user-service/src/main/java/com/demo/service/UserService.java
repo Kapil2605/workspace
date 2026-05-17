@@ -1,5 +1,6 @@
 package com.demo.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,8 @@ import com.demo.external.Rating;
 import com.demo.repository.UserRepository;
 
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.ratelimiter.RequestNotPermitted;
+import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
 import jakarta.transaction.Transactional;
 
 @Service
@@ -55,5 +58,25 @@ public class UserService {
         user.setRatings(List.of(rating));
 
         return user;
+    }
+
+    //get all user
+    @RateLimiter(name = "userRateLimiter", fallbackMethod = "userFallback")
+	public List<User> getAllUser() {
+		return repo.findAll();
+	}
+    
+    public List<User> userFallback(RequestNotPermitted  ex){
+
+        List<User> users = new ArrayList<>();
+
+        User user = new User();
+
+        user.setName("Fallback User");
+        user.setEmail("Too many requests");
+
+        users.add(user);
+
+        return users;
     }
 }
