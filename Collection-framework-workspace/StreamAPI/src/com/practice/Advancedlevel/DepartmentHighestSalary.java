@@ -1,14 +1,16 @@
 package com.practice.Advancedlevel;
 
 import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 class Employees {
     int id;
     String name;
     String department;
-    double salary;
+    int salary;
 
-    Employees(int id, String name, String department, double salary) {
+    Employees(int id, String name, String department, int salary) {
         this.id = id;
         this.name = name;
         this.department = department;
@@ -19,7 +21,7 @@ class Employees {
         return department;
     }
 
-    public double getSalary() {
+    public int getSalary() {
         return salary;
     }
 
@@ -42,7 +44,9 @@ public class DepartmentHighestSalary {
 			);
 		
 		
-
+		Map<Object, Optional<Employees>>output=employees.stream().collect(
+				Collectors.groupingBy(n->n.department,Collectors.maxBy((a,b)->a.salary-b.salary)));
+		System.out.println(output);
 	}
 
 }
