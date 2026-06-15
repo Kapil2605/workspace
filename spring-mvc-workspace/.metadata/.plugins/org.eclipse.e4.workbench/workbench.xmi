@@ -275,7 +275,7 @@
     <sharedElements xsi:type="basic:Part" xmi:id="_Ghk9ZxDbEfGZQYF0ZAFbEg" elementId="org.eclipse.ui.views.ProblemView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Problems" iconURI="platform:/plugin/org.eclipse.ui.ide/icons/full/eview16/problems_view.svg" tooltip="" closeable="true">
       <persistedState key="originalCompatibilityViewClass" value="org.eclipse.ui.internal.views.markers.ProblemsView"/>
       <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.ui.ide"/>
-      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view PRIMARY_SORT_FIELD=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot; categoryGroup=&quot;org.eclipse.ui.ide.severity&quot; markerContentGenerator=&quot;org.eclipse.ui.ide.problemsGenerator&quot;>&#xD;&#xA;&lt;expanded>&#xD;&#xA;&lt;category IMemento.internal.id=&quot;Errors&quot;/>&#xD;&#xA;&lt;category IMemento.internal.id=&quot;Warnings&quot;/>&#xD;&#xA;&lt;/expanded>&#xD;&#xA;&lt;columnWidths org.eclipse.ui.ide.locationField=&quot;105&quot; org.eclipse.ui.ide.markerType=&quot;105&quot; org.eclipse.ui.ide.pathField=&quot;140&quot; org.eclipse.ui.ide.resourceField=&quot;105&quot; org.eclipse.ui.ide.severityAndDescriptionField=&quot;350&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.resourceField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.pathField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.locationField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.markerType&quot;/>&#xD;&#xA;&lt;/view>"/>
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view PRIMARY_SORT_FIELD=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot; categoryGroup=&quot;org.eclipse.ui.ide.severity&quot; markerContentGenerator=&quot;org.eclipse.ui.ide.problemsGenerator&quot;>&#xD;&#xA;&lt;columnWidths org.eclipse.ui.ide.locationField=&quot;105&quot; org.eclipse.ui.ide.markerType=&quot;105&quot; org.eclipse.ui.ide.pathField=&quot;140&quot; org.eclipse.ui.ide.resourceField=&quot;105&quot; org.eclipse.ui.ide.severityAndDescriptionField=&quot;350&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.resourceField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.pathField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.locationField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.markerType&quot;/>&#xD;&#xA;&lt;/view>"/>
       <tags>View</tags>
       <tags>categoryTag:General</tags>
       <menus xmi:id="_Ghk9aBDbEfGZQYF0ZAFbEg" elementId="org.eclipse.ui.views.ProblemView">
@@ -455,7 +455,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_GhlkjhDbEfGZQYF0ZAFbEg" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_2whKoFskEfGuqaEYMCIE_g" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.svg" tooltip="Print" command="_Ghp4LBDbEfGZQYF0ZAFbEg"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_Iy5Q92cYEfGVL4qKYuUfOw" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.svg" tooltip="Print" command="_Ghp4LBDbEfGZQYF0ZAFbEg"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_GhlkmxDbEfGZQYF0ZAFbEg" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -463,8 +463,8 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_GhlknRDbEfGZQYF0ZAFbEg" elementId="org.eclipse.ui.workbench.edit">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_2whKplskEfGuqaEYMCIE_g" elementId="undo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/undo_edit.svg" tooltip="Undo" enabled="false" command="_Ghp2TBDbEfGZQYF0ZAFbEg"/>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_2whKp1skEfGuqaEYMCIE_g" elementId="redo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/redo_edit.svg" tooltip="Redo" enabled="false" command="_Ghp23hDbEfGZQYF0ZAFbEg"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_Iy5Q_WcYEfGVL4qKYuUfOw" elementId="undo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/undo_edit.svg" tooltip="Undo" enabled="false" command="_Ghp2TBDbEfGZQYF0ZAFbEg"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_Iy5Q_mcYEfGVL4qKYuUfOw" elementId="redo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/redo_edit.svg" tooltip="Redo" enabled="false" command="_Ghp23hDbEfGZQYF0ZAFbEg"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_GhlkoRDbEfGZQYF0ZAFbEg" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -488,7 +488,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_Ghlk6xDbEfGZQYF0ZAFbEg" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_2whKrVskEfGuqaEYMCIE_g" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.svg" tooltip="Pin Editor" enabled="false" type="Check" command="_Ghp33BDbEfGZQYF0ZAFbEg"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_IzAlsGcYEfGVL4qKYuUfOw" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.svg" tooltip="Pin Editor" enabled="false" type="Check" command="_Ghp33BDbEfGZQYF0ZAFbEg"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_Ghlk-BDbEfGZQYF0ZAFbEg" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
