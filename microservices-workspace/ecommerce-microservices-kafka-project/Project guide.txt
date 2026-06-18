@@ -1,0 +1,16 @@
+To run Ecommerce Kafka microservice project follow these steps:
+1.Run docker and run container of kafka,zookeeper,zipkin
+2.Open Eclipse and run project:
+	a)run service registry(eureka server)
+	b)run config server
+	c)run user-service
+	d)run product-service
+	e)run cart-service
+	f)run order-service
+	g)run notification-service
+	f)run payment-service
+	
+3.run eureka server on 8761 http://localhost:8761/
+4.run zipkin on http://localhost:9411/zipkin/
+5. if want to check config then open https://github.com/Kapil2605/ecommerce-config-server-microservice/tree/main
+6. All done test api in postman 
