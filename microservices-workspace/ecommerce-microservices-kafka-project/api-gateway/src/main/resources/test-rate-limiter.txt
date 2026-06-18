@@ -1,0 +1,13 @@
+1..10 | ForEach-Object {
+    try {
+        $r = Invoke-WebRequest `
+            -Uri "http://localhost:9090/products/5" `
+            -Method GET `
+            -UseBasicParsing
+
+        Write-Host "SUCCESS $($r.StatusCode)"
+    }
+    catch {
+        Write-Host "FAILED $($_.Exception.Response.StatusCode.value__)"
+    }
+}
