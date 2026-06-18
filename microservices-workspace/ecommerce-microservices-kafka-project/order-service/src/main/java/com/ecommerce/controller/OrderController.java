@@ -1,5 +1,7 @@
 package com.ecommerce.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,9 +22,13 @@ public class OrderController {
 	@Autowired
 	private OrderService orderService;
 
+	private static final Logger log = LoggerFactory.getLogger(OrderController.class);
+	
 	@PostMapping("/place/{userId}")
 	public Order placeOrder(@PathVariable Long userId) {
+		log.info("Order Request Received");
 
+		log.info("TraceId={}, SpanId={}");
 		return orderService.placeOrder(userId);
 	}
 

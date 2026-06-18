@@ -1,5 +1,7 @@
 package com.ecommerce.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,6 +27,8 @@ public class CartController {
 	@Autowired
 	CartRepository cartRepository;
 
+	private static final Logger log = LoggerFactory.getLogger(CartController.class);
+
 	// add to cart
 	@PostMapping("/add")
 	public CartEntity addToCart(@RequestParam Long userId, @RequestParam Long productId,
@@ -36,6 +40,9 @@ public class CartController {
 	// get cart details
 	@GetMapping("/{userId}")
 	public CartEntity getCart(@PathVariable Long userId) {
+		log.info("Cart id request Received");
+
+		log.info("TraceId={}, SpanId={}");
 		return cartService.getCart(userId);
 	}
 

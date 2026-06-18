@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.ecommerce.dto.CartResponse;
 
-@FeignClient(name = "cart-service")
+@FeignClient(name = "cart-service",configuration = TracingFeignConfig.class)
 public interface CartClient {
 
 	@GetMapping("/cart/{userId}")

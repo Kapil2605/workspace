@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.ecommerce.dto.UserResponse;
 
-@FeignClient(name = "user-service")
+@FeignClient(name = "user-service",configuration = TracingFeignConfig.class)
 public interface UserClient {
 
 	@GetMapping("/user/{id}")
