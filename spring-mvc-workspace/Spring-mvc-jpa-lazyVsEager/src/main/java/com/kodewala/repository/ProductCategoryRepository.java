@@ -25,7 +25,7 @@ public interface ProductCategoryRepository extends CrudRepository<Category, Inte
 //	Clothes
 	
 	
-	@EntityGraph(attributePaths = {"products"})
+	//@EntityGraph(attributePaths = {"products"})
 	//@Query("select c from Category c join fetch c.products")
 	public Iterable<Category> findAll();
 	

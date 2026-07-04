@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.ecommerce.client.CartClient;
@@ -22,6 +23,8 @@ import com.ecommerce.exception.EmptyCartException;
 import com.ecommerce.exception.InsufficientStockException;
 import com.ecommerce.kafka_integration.KafkaConfig;
 import com.ecommerce.repository.OrderRepository;
+
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 
 @Service
 public class OrderService {
@@ -128,11 +131,14 @@ public class OrderService {
 
         event.setItems(kafkaItems);
 
+        //kafka work
         kafkaConfig.publishOrderCreated(
                 String.valueOf(savedOrder.getUserId()),
                 event
         );
     }
+    
+    
     
     
     public Order updateStatus(Long orderId,OrderStatus status) {
@@ -150,4 +156,15 @@ public class OrderService {
         return orderRepository.findById(id)
                 .orElseThrow();
     }
+    
+	@CircuitBreaker(name = "kafkaOrderServiceBreaker", fallbackMethod = "kafkaOrderServiceFallback")
+	public void placeDummyOrder() {
+		//kafka work
+		kafkaConfig.dummyOrderPlaced();
+	}
+	
+	public ResponseEntity<?> kafkaOrderServiceFallback(Long userId, Exception ex) {
+		System.out.println("Kafka service unavailable : " + ex.getMessage());
+		return ResponseEntity.ok("Kafka Service is currently unavailable");
+	}
 }

@@ -1,0 +1,24 @@
+The Singleton Design Pattern is a creational design pattern that ensures:
+
+Only one instance of a class can exist.
+The instance is globally accessible throughout the application.
+
+Why use Singleton?
+You use a singleton when exactly one object should coordinate actions across the system, such as:
+
+Database connections
+Configuration managers
+Logging services
+Cache managers
+
+Advantages
+
+✅ Controlled access to a single instance
+✅ Saves memory/resources when only one object is needed
+✅ Provides a global access point
+
+Disadvantages
+
+❌ Acts like a global variable, increasing coupling
+❌ Harder to unit test and mock
+❌ Can cause concurrency issues if not implemented correctly

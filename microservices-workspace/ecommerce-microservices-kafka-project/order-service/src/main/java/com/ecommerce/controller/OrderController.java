@@ -31,6 +31,15 @@ public class OrderController {
 		log.info("TraceId={}, SpanId={}");
 		return orderService.placeOrder(userId);
 	}
+	
+	@PostMapping("/placeOrder")
+	public void placeDummyOrder() {
+		log.info("Dummy Order Request Received");
+
+		log.info("TraceId={}, SpanId={}");
+		orderService.placeDummyOrder();
+	}
+	
 
 	@GetMapping("/{id}")
 	public Order getOrder(@PathVariable Long id) {

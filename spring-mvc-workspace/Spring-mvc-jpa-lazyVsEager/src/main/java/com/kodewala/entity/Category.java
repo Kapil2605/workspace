@@ -26,7 +26,7 @@ public class Category {
 	private String description;
 	private String status;
 
-	@OneToMany(mappedBy = "category", cascade = CascadeType.ALL , fetch = FetchType.EAGER)
+	@OneToMany(mappedBy = "category", cascade = CascadeType.ALL , fetch = FetchType.LAZY)
 	private List<Product> products = new ArrayList<>();
 
 	public int getId() {

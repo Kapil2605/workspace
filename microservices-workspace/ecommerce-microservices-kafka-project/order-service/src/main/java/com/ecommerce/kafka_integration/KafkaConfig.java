@@ -16,4 +16,8 @@ public class KafkaConfig {
 
 		kafkaTemplate.send("order-created-topic",userId, event);
 	}
+	
+	public void dummyOrderPlaced() {
+		kafkaTemplate.send("sample-topic",1);
+	}
 }

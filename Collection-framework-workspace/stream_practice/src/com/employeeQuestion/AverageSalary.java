@@ -1,0 +1,17 @@
+package com.employeeQuestion;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class AverageSalary {
+	public static void main(String[] args) {
+		List<Employee> list = EmployeeData.getEmployee();
+//		double avg = list.stream().mapToInt(Employee::getSalary).average().orElse(0);
+//
+//		System.out.println(avg);
+		
+		double num=list.stream().map(a->a.getSalary()).reduce(0, (a,b)->a+b);
+		double result=num/list.size();
+		System.out.println(result);
+	}
+}

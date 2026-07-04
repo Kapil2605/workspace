@@ -1,6 +1,7 @@
 package com.ecommerce.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.ecommerce.entity.CartEntity;
@@ -9,6 +10,9 @@ import com.ecommerce.exception.InsufficientStockException;
 import com.ecommerce.productclient.ProductResponse;
 import com.ecommerce.productclient.ProductClient;
 import com.ecommerce.repository.CartRepository;
+
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+
 
 @Service
 public class CartService {
@@ -19,6 +23,7 @@ public class CartService {
 	@Autowired
 	ProductClient productClient;
 
+	@CircuitBreaker(name = "productEcommerceBreaker", fallbackMethod = "productEcommerceServiceFallback")
 	public CartEntity addToCart(Long userId, Long productId, Integer quantity) {
 
 		//checking product details through feign client through product ID
@@ -75,6 +80,12 @@ public class CartService {
 				cart.getItems().add(item);
 		    }
 		return cartRepository.save(cart);
+	}
+	
+	
+	public ResponseEntity<?> productEcommerceServiceFallback(Long userId, Long productId, Integer quantity, Exception ex) {
+		System.out.println("Product service unavailable : " + ex.getMessage());
+		return ResponseEntity.ok("Product Service is currently unavailable");
 	}
 	
 	public CartEntity getCart(Long userId) {
