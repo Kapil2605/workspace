@@ -1,0 +1,26 @@
+package com.employeeQuestion;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class SortEmployeeByNameAndSalary {
+	public static void main(String[] args) {
+		List<Employee>list=EmployeeData.getEmployee();
+//		List<Employee>result=list.stream().sorted((a,b)->a.getSalary()-b.getSalary()).sorted((a,b)->a.getName().compareTo(b.getName())).collect(Collectors.toList());
+//
+		
+		List<Employee> results = list.stream()
+			    .sorted((a, b) -> {
+			        if (a.getSalary() != b.getSalary()) {
+			            return a.getSalary() - b.getSalary();
+			        }
+			        return a.getName().compareTo(b.getName());
+			    })
+			    .collect(Collectors.toList());
+		
+		for(Employee emp:results) {
+			System.out.println(emp.id+ " "+emp.name+" "+emp.salary+" "+emp.age);
+		}
+		
+	}
+}

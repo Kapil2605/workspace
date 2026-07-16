@@ -1,0 +1,13 @@
+package com.employeeQuestion;
+
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+public class DepartmentWiseHighestSalary {
+	public static void main(String[] args) {
+		List<Employee> list = EmployeeData.getEmployee();
+		Stream<Employee> emp=list.stream().sorted((a,b)->b.getSalary()-a.getSalary()).skip(1);
+		System.out.println(emp);
+	}
+}

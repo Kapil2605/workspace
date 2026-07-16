@@ -1,0 +1,10 @@
+package com.employeeQuestion;
+
+import java.util.*;
+import java.lang.*;
+
+public class SecondHighestSalary {
+	List<Employee>list=EmployeeData.getEmployee();
+	Employee emp=list.stream().sorted((a,b)->b.getSalary()-a.getSalary()).findFirst().get();
+	syso
+}

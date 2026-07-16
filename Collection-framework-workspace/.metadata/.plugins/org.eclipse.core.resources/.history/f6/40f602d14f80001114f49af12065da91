@@ -1,0 +1,5 @@
+package com.employeeQuestion;
+
+public class HighestEmployeeSalaryInEachDepartment {
+
+}

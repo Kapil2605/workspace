@@ -1,0 +1,17 @@
+package com.employeeQuestion;
+
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.stream.Collectors;
+
+public class DepartmentWithHighestAverageSalary {
+	public static void main(String[] args) {
+		List<Employee> list = EmployeeData.getEmployee();
+		Map<Object, Double>result=list.stream().collect(Collectors.groupingBy(e->e.getDept(),Collectors.averagingDouble(e->e.getSalary())));
+		
+		for(Entry<Object, Double>entry:result.entrySet()) {
+			System.out.println(entry.getKey()+" "+entry.getValue());
+		}
+	}
+}

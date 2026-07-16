@@ -1,0 +1,21 @@
+package com.employeeQuestion;
+
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.stream.Collectors;
+
+public class DepartmentWithHighestEmployee {
+	public static void main(String[] args) {
+		List<Employee>list=EmployeeData.getEmployee();
+		Map<String,Long>result=list.stream().collect(Collectors.groupingBy(e->e.getDept(),Collectors.counting()));
+		
+		Iterator<Entry<String, Long>> itr = result.entrySet().iterator();
+
+		while (itr.hasNext()) {
+		    Entry<String, Long> entry = itr.next();
+		    System.out.println(entry.getKey() + " " + entry.getValue());
+		}
+	}
+}

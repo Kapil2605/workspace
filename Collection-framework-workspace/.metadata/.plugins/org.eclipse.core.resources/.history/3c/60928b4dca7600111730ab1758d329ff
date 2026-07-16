@@ -1,0 +1,12 @@
+package com.employeeQuestion;
+
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+public class CountEmployeeDept {
+	public static void main(String[] args) {
+		List<Employee> list = EmployeeData.getEmployee();
+		Map<String,Long>result=list.stream().collect(Collectors.groupingBy(s->s.getDept(),Collectors.counting()));
+	}
+}
