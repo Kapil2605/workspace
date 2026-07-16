@@ -1,0 +1,90 @@
+Step 1: Go to your Spring Boot project
+
+Example:
+
+cd D:\workspaces\microservices-workspace\HotelManagement-Microservices\service-registry
+Step 2: Build the project
+mvn clean package
+
+After successful build, check:
+
+dir target
+
+You should see something like:
+
+service-registry-0.0.1-SNAPSHOT.jar
+Step 3: Create a Dockerfile
+
+Inside the service-registry folder, create a file named:
+
+Dockerfile
+
+Contents:
+
+FROM eclipse-temurin:21-jdk
+
+WORKDIR /app
+
+COPY target/*.jar app.jar
+
+EXPOSE 8761
+
+ENTRYPOINT ["java","-jar","app.jar"]
+
+Replace 8761 with your application's server.port.
+
+Step 4: Build the Docker image
+docker build -t service-registry .
+
+Check that it was created:
+
+docker images
+
+Example:
+
+REPOSITORY          TAG       IMAGE ID
+service-registry    latest    abcd12345
+Step 5: Run the container
+docker run -d -p 8761:8761 --name service-registry service-registry
+
+Meaning:
+
+-d → Run in background
+-p 8761:8761 → Host port : Container port
+--name → Container name
+Step 6: Verify the container
+docker ps
+
+Example:
+
+CONTAINER ID   IMAGE              PORTS
+123456789abc   service-registry   0.0.0.0:8761->8761/tcp
+Step 7: Check logs
+docker logs service-registry
+
+You should see:
+
+Started ServiceRegistryApplication
+Tomcat started on port(s): 8761
+Step 8: Open in browser
+http://localhost:8761
+
+If it's a Eureka Server, you'll see the Eureka dashboard.
+
+Useful Docker Commands
+Show images
+docker images
+Show running containers
+docker ps
+Show all containers
+docker ps -a
+Stop a container
+docker stop service-registry
+Start it again
+docker start service-registry
+Restart
+docker restart service-registry
+Remove container
+docker rm service-registry
+Remove image
+docker rmi service-registry

@@ -1,0 +1,19 @@
+package com.employeeQuestion;
+
+import java.util.Comparator;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
+public class HighestEmployeeSalaryInEachDepartment {
+	public static void main(String[] args) {
+		List<Employee> list = EmployeeData.getEmployee();
+		Map<Object, Optional<Employee>> result = list.stream().collect(Collectors.groupingBy(e->e.getDept(),
+				Collectors.maxBy((a,b)->b.getSalary()-a.getSalary())));
+		
+		result.forEach((dept, emp) ->
+        System.out.println(dept + " -> " + emp.get().getDept() + " : " + emp.get().getSalary()));
+	}
+}
